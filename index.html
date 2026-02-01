@@ -15,7 +15,21 @@
             background-image: linear-gradient(rgba(11, 28, 62, 0.7), rgba(11, 28, 62, 0.7)), url('haslevauto.jpg');
             background-size: cover;
             background-position: center;
+    }        
+    .animate-fade-in-up {
+        animation: fadeInUp 1s ease-out;
+    }
+            
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translate3d(0, 40px, 0);
         }
+        to {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+    }
     </style>
     <script>
         tailwind.config = {
@@ -49,24 +63,54 @@
         </div>
     </nav>
        
-        <header class="hero-bg h-screen min-h-[500px] flex items-center justify-center md:items-end md:justify-end text-center md:text-right px-4 pt-20 md:pb-32 md:pr-10">
+      <header class="relative h-screen min-h-[600px] flex items-center justify-center text-center px-4 overflow-hidden">
         
-        <div class="max-w-3xl text-white">
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight shadow-black drop-shadow-md">
-                Dit lokale autoværksted <br/> <span class="text-auto-yellow">nu med ny energi</span>
+        <div class="absolute inset-0 w-full h-full z-0">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 transform hover:scale-105" 
+                 style="background-image: url('haslevauto.jpg');">
+            </div>
+            
+            <div class="absolute inset-0 bg-auto-blue/70 mix-blend-multiply"></div>
+            
+            <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-gray-50 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto flex flex-col items-center animate-fade-in-up">
+            
+            <span class="inline-block py-1 px-4 rounded-full bg-auto-yellow text-auto-blue font-extrabold text-sm tracking-widest mb-6 shadow-lg uppercase">
+                Ny ejer • Samme gode service
+            </span>
+
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight drop-shadow-lg">
+                Dit lokale autoværksted <br/>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400">
+                    nu med ny energi
+                </span>
             </h1>
-            <p class="text-xl md:text-2xl mb-8 font-light text-gray-100 drop-shadow-md">
-                Samme adresse, samme gode service – Jacob har taget over.
+
+            <p class="text-xl md:text-2xl text-gray-200 mb-10 font-light max-w-2xl drop-shadow-md">
+                Jacob har overtaget værkstedet på Finlandsgade. <br class="hidden md:block" />
+                Vi står klar med kaffen og det gode håndværk.
             </p>
             
-            <div class="flex flex-col sm:flex-row justify-center md:justify-end gap-4">
-                <a href="tel:56313924" class="bg-auto-red hover:bg-red-700 text-white text-lg font-bold py-4 px-8 rounded shadow-lg transition transform hover:scale-105">
-                    Ring og bestil tid
+            <div class="flex flex-col sm:flex-row gap-5 w-full sm:w-auto">
+                <a href="tel:56313924" class="group bg-auto-red hover:bg-red-700 text-white text-lg font-bold py-4 px-10 rounded-lg shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center">
+                    <span>Ring og bestil tid</span>
+                    <i class="fas fa-arrow-right ml-2 group-hover:ml-4 transition-all"></i>
                 </a>
-                <a href="#kontakt" class="bg-white hover:bg-gray-100 text-auto-blue text-lg font-bold py-4 px-8 rounded shadow-lg transition">
+                
+                <a href="#kontakt" class="bg-white/10 hover:bg-white/20 backdrop-blur-sm border-2 border-white text-white text-lg font-bold py-4 px-10 rounded-lg shadow-lg transition-all duration-300 hover:bg-white hover:text-auto-blue flex items-center justify-center">
                     Find vej
                 </a>
             </div>
+
+            <div class="mt-12 opacity-80">
+                <p class="text-gray-300 text-sm uppercase tracking-widest mb-2">Medlem af</p>
+                <div class="text-white font-bold text-xl flex items-center gap-2">
+                    <i class="fas fa-check-circle text-auto-yellow"></i> AutoPartner
+                </div>
+            </div>
+
         </div>
     </header>
     
