@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haslev Autoværksted - Dit lokale værksted</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+
+        /* Animation til teksten i toppen */
+        .animate-fade-in-up {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translate3d(0, 40px, 0);
+            }
+            to {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'auto-blue': '#0B1C3E',
+                        'auto-red': '#D11F24',
+                        'auto-yellow': '#FFD700',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="text-2xl font-extrabold text-auto-blue uppercase tracking-tighter">
+                    Haslev <span class="text-auto-red">Autoværksted</span>
+                </div>
+            </div>
+
+            <a href="tel:56313924" class="bg-auto-red hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full transition duration-300 flex items-center shadow-lg">
+                <i class="fas fa-phone-alt mr-2"></i>
+                <span class="hidden sm:inline">56 31 39 24</span>
+                <span class="sm:hidden">Ring</span>
+            </a>
+        </div>
+    </nav>
+
+    <header class="relative h-screen min-h-[600px] flex items-end justify-center text-center px-4 pb-24 overflow-hidden">
+
+        <div class="absolute inset-0 w-full h-full z-0">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 transform hover:scale-105"
+                 style="background-image: url('img/hero.jpg');">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-b from-auto-blue/30 via-auto-blue/40 to-auto-blue/90 mix-blend-multiply"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto flex flex-col items-center animate-fade-in-up">
+
+            <span class="inline-block py-1 px-4 rounded-full bg-auto-yellow text-auto-blue font-extrabold text-sm tracking-widest mb-6 shadow-lg uppercase">
+                Ny ejer • Samme gode service
+            </span>
+
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight drop-shadow-lg">
+                Dit lokale autoværksted <br/>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400">
+                    nu med ny energi
+                </span>
+            </h1>
+
+            <p class="text-xl md:text-2xl text-gray-200 mb-10 font-light max-w-2xl drop-shadow-md">
+                Jacob har overtaget værkstedet på Finlandsgade. <br class="hidden md:block" />
+                Vi står klar med kaffen og det gode håndværk.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-5 w-full sm:w-auto">
+                <a href="tel:56313924" class="group bg-auto-red hover:bg-red-700 text-white text-lg font-bold py-4 px-10 rounded-lg shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center">
+                    <span>Ring og bestil tid</span>
+                    <i class="fas fa-arrow-right ml-2 group-hover:ml-4 transition-all"></i>
+                </a>
+
+                <a href="#kontakt" class="bg-white/10 hover:bg-white/20 backdrop-blur-sm border-2 border-white text-white text-lg font-bold py-4 px-10 rounded-lg shadow-lg transition-all duration-300 hover:bg-white hover:text-auto-blue flex items-center justify-center">
+                    Find vej
+                </a>
+            </div>
+
+            <div class="mt-8 opacity-90">
+                <p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Medlem af</p>
+                <div class="text-white font-bold text-lg flex items-center gap-2">
+                    <i class="fas fa-check-circle text-auto-yellow"></i> AutoPartner
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- VELKOMMEN — nu med billede af Jacob -->
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
+
+            <div class="order-2 md:order-1">
+                <h2 class="text-3xl font-bold text-auto-blue mb-6">Velkommen hos Haslev Autoværksted</h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Måske kender du allerede adressen på <strong>Finlandsgade 8</strong>. Værkstedet har ligget her i mange år, men for et års tid siden overtog jeg, Jacob, nøglerne.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    Min ambition er simpel: At drive et ærligt og lokalt værksted, hvor du kan være tryg ved at aflevere din bil. Vi holder fast i det gode håndværk og den personlige service, du kender – men med fornyet energi.
+                </p>
+            </div>
+
+            <div class="order-1 md:order-2 relative">
+                <img src="img/jacob.jpg" alt="Jacob, indehaver af Haslev Autoværksted"
+                     class="rounded-xl shadow-2xl w-full object-cover">
+                <span class="absolute bottom-4 left-4 bg-auto-blue/90 text-white text-sm font-bold py-2 px-4 rounded-lg shadow-lg">
+                    Jacob &middot; Indehaver
+                </span>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-auto-blue">Vi klarer alt fra service til reparation</h2>
+                <div class="w-24 h-1 bg-auto-red mx-auto mt-4 rounded"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition border-t-4 border-auto-blue">
+                    <div class="text-auto-red text-4xl mb-4"><i class="fas fa-tools"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Service & Reparation</h3>
+                    <p class="text-gray-600">Vi servicerer alle bilmærker og årgange – og vi kan også stemple i servicebogen i garantiperioden.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition border-t-4 border-auto-blue">
+                    <div class="text-auto-red text-4xl mb-4"><i class="fas fa-car-battery"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Fejlfinding</h3>
+                    <p class="text-gray-600">Lyser motorlampen? Vi har moderne diagnoseudstyr til at finde og løse fejlen hurtigt.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition border-t-4 border-auto-blue">
+                    <div class="text-auto-red text-4xl mb-4"><i class="fas fa-snowflake"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Aircondition</h3>
+                    <p class="text-gray-600">Få tjekket og renset dit klimaanlæg, så du har det rette indeklima året rundt.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition border-t-4 border-auto-blue">
+                    <div class="text-auto-red text-4xl mb-4"><i class="fas fa-tachometer-alt"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Klargøring til syn</h3>
+                    <p class="text-gray-600">Vi gennemgår bilen fra A-Z, så du undgår ubehagelige overraskelser i synshallen.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition border-t-4 border-auto-blue">
+                    <div class="text-auto-red text-4xl mb-4"><i class="fas fa-car-side"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Dækcenter</h3>
+                    <p class="text-gray-600">Salg, montering og skift af sommer- og vinterdæk. Vi hjælper med rådgivning om de rette dæk.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition border-t-4 border-auto-blue flex flex-col justify-center items-center text-center">
+                    <h3 class="text-xl font-bold mb-2">Har du et andet problem?</h3>
+                    <p class="text-gray-600 mb-4">Ring til Jacob, så finder vi en løsning.</p>
+                    <a href="tel:56313924" class="text-auto-red font-bold hover:underline">56 31 39 24</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TILLID — nu med billede af Jacob og kunde -->
+    <section class="py-16 bg-auto-blue text-white relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 relative z-10 grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
+
+            <div>
+                <h2 class="text-3xl font-bold mb-4">Et værksted du kan stole på</h2>
+                <p class="text-gray-300 mb-6 text-lg">
+                    Som medlem af <strong>AutoPartner</strong> er vi underlagt løbende kvalitetskontrol. Det betyder, at du altid er sikret professionelt arbejde og reservedele af høj kvalitet.
+                </p>
+                <div class="bg-white/10 p-6 rounded-lg border-l-4 border-auto-yellow mb-6">
+                    <h3 class="text-2xl font-bold text-auto-yellow mb-2">3 ÅRS GARANTI</h3>
+                    <p>Vi giver 3 års garanti på alt udført arbejde (både reservedele og løn). Det gør vi, fordi vi står inde for kvaliteten.</p>
+                </div>
+                <img src="Autopartnerlogo.png" alt="AutoPartner Værksted" class="h-20">
+            </div>
+
+            <div class="relative">
+                <img src="img/kunder.jpg" alt="Personlig service og rådgivning hos Haslev Autoværksted"
+                     class="rounded-xl shadow-2xl w-full object-cover">
+                <span class="absolute bottom-4 left-4 bg-auto-red text-white text-sm font-bold py-2 px-4 rounded-lg shadow-lg">
+                    Personlig service – hver gang
+                </span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- NYT: Kig indenfor (galleri) -->
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-auto-blue">Kig indenfor på værkstedet</h2>
+                <div class="w-24 h-1 bg-auto-red mx-auto mt-4 rounded"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="overflow-hidden rounded-xl shadow-md group">
+                    <img src="img/vaerksted.jpg" alt="Bil på lift i værkstedet"
+                         class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-md group">
+                    <img src="img/vaerksted2.jpg" alt="Hverdag i værkstedet"
+                         class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-md group sm:col-span-2 lg:col-span-1">
+                    <img src="img/facade.jpg" alt="Haslev Autoværksted på Finlandsgade 8"
+                         class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <footer id="kontakt" class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <div>
+                <h4 class="text-white text-xl font-bold mb-4">Haslev Autoværksted</h4>
+
+                <p class="mb-2"><i class="fas fa-map-marker-alt w-6 text-auto-red"></i> Finlandsgade 8, 4690 Haslev</p>
+
+                <p class="mb-2"><a href="tel:56313924" class="hover:text-white"><i class="fas fa-phone w-6 text-auto-red"></i> 56 31 39 24</a></p>
+
+                <p class="mb-2"><a href="mailto:info@haslevauto.dk" class="hover:text-white"><i class="fas fa-envelope w-6 text-auto-red"></i> info@haslevauto.dk</a></p>
+
+                <p class="mt-4 text-sm text-gray-500">CVR: 40801987 </p>
+            </div>
+
+            <div>
+                <h4 class="text-white text-xl font-bold mb-4">Åbningstider</h4>
+                <ul class="space-y-2">
+                    <li class="flex justify-between border-b border-gray-800 pb-1"><span>Mandag - Torsdag:</span> <span>08:00 - 16:00</span></li>
+                    <li class="flex justify-between border-b border-gray-800 pb-1"><span>Fredag:</span> <span>08:00 - 15:30</span></li>
+                    <li class="flex justify-between border-b border-gray-800 pb-1"><span>Lørdag - Søndag:</span> <span>Lukket</span></li>
+                </ul>
+            </div>
+
+            <div class="h-48 rounded overflow-hidden bg-gray-800 relative group border-2 border-gray-700">
+
+                <img src="kort.png" alt="Kort over Haslev"
+                     class="w-full h-full object-cover opacity-60 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500">
+
+                <a href="https://www.google.com/maps/search/?api=1&query=Haslev+Autoværksted+Finlandsgade+8"
+                   target="_blank"
+                   class="absolute inset-0 flex items-center justify-center bg-black/50 group-hover:bg-black/30 transition z-10">
+
+                    <span class="border-2 border-white px-4 py-2 text-white font-bold rounded hover:bg-white hover:text-black transition flex items-center gap-2">
+                        <i class="fas fa-map-marked-alt"></i> Find vej på Google Maps
+                    </span>
+                </a>
+
+            </div>
+
+        </div>
+        <div class="text-center mt-12 pt-8 border-t border-gray-800 text-sm text-gray-500">
+            © 2025 Haslev Autoværksted. Alle rettigheder forbeholdes.
+        </div>
+    </footer>
+</body>
+</html>
