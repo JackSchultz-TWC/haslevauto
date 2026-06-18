@@ -1,0 +1,9 @@
+.git*
+.github/
+NyeBilleder/
+index-udkast.html
+README.md
+_hero*.jpg
+_hero*.png
+*.py
+node_modules/
