@@ -3,7 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Haslev Autoværksted - Dit lokale værksted</title>
+    <title>Haslev Autoværksted – Autoværksted i Haslev &amp; Faxe Kommune</title>
+    <meta name="description" content="Lokalt autoværksted i Haslev. Service, reparation, dækskifte og klargøring til syn for hele Faxe Kommune. 3 års garanti på alt arbejde. Ring 56 31 39 24.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://haslevauto.dk/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="business.business">
+    <meta property="og:title" content="Haslev Autoværksted – Autoværksted i Haslev & Faxe Kommune">
+    <meta property="og:description" content="Lokalt autoværksted i Haslev. Service, reparation, dækskifte og klargøring til syn for hele Faxe Kommune. 3 års garanti på alt arbejde.">
+    <meta property="og:image" content="https://haslevauto.dk/img/hero.jpg">
+    <meta property="og:url" content="https://haslevauto.dk/">
+    <meta property="og:locale" content="da_DK">
+    <meta property="og:site_name" content="Haslev Autoværksted">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Haslev Autoværksted – Autoværksted i Haslev & Faxe Kommune">
+    <meta name="twitter:description" content="Lokalt autoværksted i Haslev. Service, reparation, dækskifte og klargøring til syn for hele Faxe Kommune.">
+    <meta name="twitter:image" content="https://haslevauto.dk/img/hero.jpg">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -39,6 +58,111 @@
                 }
             }
         }
+    </script>
+
+    <!-- Structured data: lokal virksomhed -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoRepair",
+      "@id": "https://haslevauto.dk/#business",
+      "name": "Haslev Autoværksted",
+      "image": "https://haslevauto.dk/img/facade.jpg",
+      "url": "https://haslevauto.dk/",
+      "telephone": "+4556313924",
+      "email": "info@haslevauto.dk",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Finlandsgade 8",
+        "addressLocality": "Haslev",
+        "postalCode": "4690",
+        "addressCountry": "DK"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Haslev" },
+        { "@type": "AdministrativeArea", "name": "Faxe Kommune" },
+        { "@type": "City", "name": "Faxe" },
+        { "@type": "City", "name": "Rønnede" },
+        { "@type": "City", "name": "Dalby" },
+        { "@type": "City", "name": "Terslev" }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+          "opens": "08:00",
+          "closes": "16:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Friday"],
+          "opens": "08:00",
+          "closes": "15:30"
+        }
+      ],
+      "memberOf": {
+        "@type": "Organization",
+        "name": "AutoPartner"
+      },
+      "makesOffer": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Service og reparation" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fejlfinding og diagnose" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Aircondition service" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Klargøring til syn" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dækskifte og dækcenter" } }
+      ]
+    }
+    </script>
+
+    <!-- Structured data: FAQ (vises også synligt på siden) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Hvor ligger Haslev Autoværksted?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vi ligger på Finlandsgade 8, 4690 Haslev – centralt i Faxe Kommune."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hvilke områder servicerer I?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vi servicerer kunder i Haslev, Faxe, Rønnede, Dalby, Terslev og resten af Faxe Kommune."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Giver I garanti på reparationer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, vi giver 3 års garanti på alt udført arbejde – både reservedele og løn – som medlem af AutoPartner."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kan I servicere min bil uden at ugyldiggøre fabriksgarantien?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Som AutoPartner-værksted kan vi stemple din servicebog i garantiperioden, så din fabriksgaranti forbliver gyldig."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Skal jeg bestille tid?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Du kan booke tid online via vores bookingsystem, eller ringe til os på 56 31 39 24."
+          }
+        }
+      ]
+    }
     </script>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -79,21 +203,28 @@
         <div class="relative z-10 max-w-4xl mx-auto flex flex-col items-center animate-fade-in-up">
 
             <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight drop-shadow-lg">
-                Dit lokale autoværksted
+                Dit lokale autoværksted i Haslev
             </h1>
 
             <p class="text-xl md:text-2xl text-gray-200 mb-10 font-light max-w-2xl drop-shadow-md">
                 Klar med godt håndværk og en god kop kaffe.
             </p>
 
-            <div class="flex flex-col sm:flex-row gap-5 w-full sm:w-auto">
-                <a href="tel:56313924" class="group bg-auto-red hover:bg-red-700 text-white text-lg font-bold py-4 px-10 rounded-lg shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center">
-                    <span>Ring og bestil tid</span>
-                    <i class="fas fa-arrow-right ml-2 group-hover:ml-4 transition-all"></i>
-                </a>
+            <a href="https://booking.autopartner.dk/workshop/740db243cdb44aef8d39936ecf1873d7"
+               target="_blank" rel="noopener"
+               class="group bg-auto-red hover:bg-red-700 text-white text-lg font-bold py-4 px-10 rounded-lg shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center">
+                <i class="fas fa-calendar-check mr-2"></i>
+                <span>Book tid</span>
+                <i class="fas fa-arrow-right ml-2 group-hover:ml-4 transition-all"></i>
+            </a>
 
-                <a href="#kontakt" class="bg-white/10 hover:bg-white/20 backdrop-blur-sm border-2 border-white text-white text-lg font-bold py-4 px-10 rounded-lg shadow-lg transition-all duration-300 hover:bg-white hover:text-auto-blue flex items-center justify-center">
-                    Find vej
+            <div class="flex items-center gap-6 mt-6 text-white/90 text-sm font-semibold">
+                <a href="tel:56313924" class="hover:text-white hover:underline flex items-center gap-2">
+                    <i class="fas fa-phone-alt"></i> Ring 56 31 39 24
+                </a>
+                <span class="text-white/40">|</span>
+                <a href="#kontakt" class="hover:text-white hover:underline flex items-center gap-2">
+                    <i class="fas fa-map-marker-alt"></i> Find vej
                 </a>
             </div>
 
@@ -116,10 +247,13 @@
             <div class="order-2 md:order-1">
                 <h2 class="text-3xl font-bold text-auto-blue mb-6">Velkommen hos Haslev Autoværksted</h2>
                 <p class="text-lg text-gray-600 leading-relaxed mb-6">
-                    Måske kender du allerede adressen på <strong>Finlandsgade 8</strong>. Værkstedet har ligget her i mange år, men for et års tid siden overtog jeg, Jacob, nøglerne.
+                    Måske kender du allerede adressen på <strong>Finlandsgade 8</strong>. Værkstedet har ligget her i mange år, men sidste år overtog jeg, Jacob, nøglerne.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Vi servicerer alle bilmærker og årgange — service og reparation, fejlfinding, aircondition, dækskifte og klargøring til syn. Som medlem af <strong>AutoPartner</strong> giver vi <strong>3 års garanti</strong> på alt udført arbejde (reservedele og løn), og vi kan stemple din servicebog i garantiperioden uden at det går ud over fabriksgarantien.
                 </p>
                 <p class="text-lg text-gray-600 leading-relaxed">
-                    Min ambition er simpel: At drive et ærligt og lokalt værksted, hvor du kan være tryg ved at aflevere din bil. Vi holder fast i det gode håndværk og den personlige service, du kender – men med fornyet energi.
+                    Vi lægger vægt på ærligt håndværk og personlig service — book nemt en tid online, eller ring og få en uforpligtende snak over en kop kaffe. Vi servicerer kunder fra <strong>Haslev, Faxe, Rønnede, Dalby, Terslev</strong> og resten af <strong>Faxe Kommune</strong>.
                 </p>
             </div>
 
@@ -218,16 +352,53 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="overflow-hidden rounded-xl shadow-md group">
-                    <img src="img/vaerksted.jpg" alt="Bil på lift i værkstedet"
+                    <img src="img/vaerksted.jpg" alt="Bil på lift hos Haslev Autoværksted"
                          class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
                 </div>
                 <div class="overflow-hidden rounded-xl shadow-md group">
-                    <img src="img/vaerksted2.jpg" alt="Hverdag i værkstedet"
+                    <img src="img/vaerksted2.jpg" alt="Hverdagen på autoværkstedet i Haslev"
                          class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
                 </div>
                 <div class="overflow-hidden rounded-xl shadow-md group sm:col-span-2 lg:col-span-1">
                     <img src="img/facade.jpg" alt="Haslev Autoværksted på Finlandsgade 8"
                          class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ofte stillede spørgsmål -->
+    <section class="py-16 bg-gray-100">
+        <div class="max-w-3xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-auto-blue">Ofte stillede spørgsmål</h2>
+                <div class="w-24 h-1 bg-auto-red mx-auto mt-4 rounded"></div>
+            </div>
+
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-lg font-bold text-auto-blue mb-2">Hvor ligger Haslev Autoværksted?</h3>
+                    <p class="text-gray-600">Vi ligger på Finlandsgade 8, 4690 Haslev – centralt i Faxe Kommune.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-lg font-bold text-auto-blue mb-2">Hvilke områder servicerer I?</h3>
+                    <p class="text-gray-600">Vi servicerer kunder i Haslev, Faxe, Rønnede, Dalby, Terslev og resten af Faxe Kommune.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-lg font-bold text-auto-blue mb-2">Giver I garanti på reparationer?</h3>
+                    <p class="text-gray-600">Ja, vi giver 3 års garanti på alt udført arbejde – både reservedele og løn – som medlem af AutoPartner.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-lg font-bold text-auto-blue mb-2">Kan I servicere min bil uden at ugyldiggøre fabriksgarantien?</h3>
+                    <p class="text-gray-600">Ja. Som AutoPartner-værksted kan vi stemple din servicebog i garantiperioden, så din fabriksgaranti forbliver gyldig.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-lg font-bold text-auto-blue mb-2">Skal jeg bestille tid?</h3>
+                    <p class="text-gray-600">Ja. Du kan <a href="https://booking.autopartner.dk/workshop/740db243cdb44aef8d39936ecf1873d7" target="_blank" rel="noopener" class="text-auto-red font-bold hover:underline">booke tid online</a> eller ringe til os på <a href="tel:56313924" class="text-auto-red font-bold hover:underline">56 31 39 24</a>.</p>
                 </div>
             </div>
         </div>
@@ -246,6 +417,7 @@
                 <p class="mb-2"><a href="mailto:info@haslevauto.dk" class="hover:text-white"><i class="fas fa-envelope w-6 text-auto-red"></i> info@haslevauto.dk</a></p>
 
                 <p class="mt-4 text-sm text-gray-500">CVR: 40801987 </p>
+                <p class="mt-2 text-sm text-gray-500">Servicerer Haslev, Faxe, Rønnede, Dalby og hele Faxe Kommune.</p>
             </div>
 
             <div>
