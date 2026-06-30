@@ -186,7 +186,7 @@
         </div>
     </nav>
 
-    <header class="relative h-[85vh] min-h-[560px] max-h-[860px] flex items-end justify-center text-center px-4 pb-24 overflow-hidden">
+    <header class="relative h-[85vh] min-h-[640px] max-h-[860px] flex items-start justify-center text-center px-4 pt-32 overflow-hidden">
 
         <div class="absolute inset-0 w-full h-full z-0">
             <div class="absolute inset-0 bg-cover transition-transform duration-1000 transform hover:scale-105"
@@ -195,12 +195,11 @@
             <div class="absolute inset-0 bg-gradient-to-b from-auto-blue/30 via-auto-blue/40 to-auto-blue/90 mix-blend-multiply"></div>
         </div>
 
-        <!-- Badge i himlen, over bygningsskiltet -->
-        <span class="absolute top-28 left-1/2 -translate-x-1/2 z-10 inline-block py-1 px-5 rounded-full bg-auto-yellow text-auto-blue font-extrabold text-sm tracking-widest shadow-lg uppercase whitespace-nowrap">
-            3 års garanti
-        </span>
-
         <div class="relative z-10 max-w-4xl mx-auto flex flex-col items-center animate-fade-in-up">
+
+            <span class="inline-block py-1 px-5 rounded-full bg-auto-yellow text-auto-blue font-extrabold text-sm tracking-widest mb-6 shadow-lg uppercase whitespace-nowrap">
+                3 års garanti
+            </span>
 
             <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight drop-shadow-lg">
                 Dit lokale autoværksted i Haslev
@@ -239,6 +238,16 @@
         </a>
 
     </header>
+
+    <!-- FERIELUKKET -->
+    <section class="bg-auto-yellow/90 py-3">
+        <div class="max-w-6xl mx-auto px-4 flex items-center justify-center gap-2 text-center">
+            <i class="fas fa-umbrella-beach text-auto-blue"></i>
+            <p class="text-auto-blue font-semibold text-sm sm:text-base">
+                Vi holder ferielukket i uge 29-30-31.
+            </p>
+        </div>
+    </section>
 
     <!-- VELKOMMEN — nu med billede af Jacob -->
     <section id="velkommen" class="py-16 bg-white">
